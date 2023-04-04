@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create author table
+      author: Zaur Mursalov
+      changes:
+        - createTable:
+            tableName: author
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: text
+                  constraints:
+                    nullable: false
